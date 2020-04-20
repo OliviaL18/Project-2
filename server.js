@@ -2,6 +2,7 @@
 // ---------------------------------------------------------------------------
 // ---------------------------------------------------------------------------
 
+var compression = require('compression')
 const express = require("express");
 const exphbs = require("express-handlebars");
 
@@ -18,6 +19,9 @@ const meditation = require("./routes/api-meditation-routes");
 // Express App
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+//Requests that pass through the middleware will be compressed.
+app.use(compression())
 
 // Getting sequelize for database
 const db = require("./models");
