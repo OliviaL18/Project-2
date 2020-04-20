@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins|Titan+One&display=swap');
+
+$primary-font: 'Poppins', sans-serif;
+$secondary-font: 'Futura';
+
+$primary-color: #DE1A1A!default;
+$primary-color-light: lighten($primary-color, 15%) !default;
+$primary-color-dark: darken($primary-color, 15%) !default;
+
+$secondary-color: #D78521 !default;
+$success-color: color("green", "base") !default;
+$error-color: color("red", "base") !default;
+$link-color: color("light-blue", "darken-1") !default;
+
+$gray-color: lighten(#999, 10%);
+$gray-color-light: #F8F8F8;
+$white-color: #ffffff;
+
+$primary-shadow: inset 0 0 10px rgba(0,0,0,0.45); 
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: $primary-font;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $secondary-font;  
+  font-weight: normal;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.btn {
+  font-weight: bold;
+  font-family: $primary-font;
+}
+
+.homeMusic {
+  background-color: pink;
+}
+
+#musicBtn {
+  background-color: pink;
+}
+
+.homeMeditation {
+  background-color: blue;
+}
+
+#medBtn {
+  background-color: blue;
+}
+
+.homeArt {
+  background-color: green;
+}
+
+#artBtn {
+  background-color: green;
+}
+
+footer, .page-footer {
+  min-height: 45px;
+  // background-image: url("../images/burger_background.png");
+  // /* Background vector created by freepik - www.freepik.com */
+  background: rgba(7, 172, 248, 1);
+  background-repeat: repeat; 
+  box-shadow: $primary-shadow;
+}
+
+#birds {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  margin-bottom: -30px;
+}
+
+#waves {
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  display: flex;
+  margin-bottom: -30px;
+}
+
+#topology {
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  display: flex;
+  margin-bottom: -30px;
+}
+
+#favs {
+  position: relative;
+  justify-content: center;
+  justify-items: center;
+}
+
+.card {
+  flex-direction: row;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+}
+
+//Area for floating cubes on Index
+.area{
+  // background: #4e54c8;
+  background: #000000;  
+  background: -webkit-linear-gradient(to left, #444444,#000000);  
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  margin-bottom: -30px;
+}
+
+.circles{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li{
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(7, 172, 248, 1);
+  animation: animate 25s linear infinite;
+  bottom: -300px;
+  
+}
+
+.circles li:nth-child(1){
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+  0%{
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+  }
+
+  100%{
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+  }
+
+}
+
+//Area for Bokeh effect on Music page
+.background {
+  width: 100%;
+  background: #3E1E68;
+  background-size: cover;
+  overflow: hidden;
+}
+
+$particleSize: 20vmin;
+$animationDuration: 6s;
+$amount: 20;
+.background span {
+  width: $particleSize;
+  height: $particleSize;
+  border-radius: $particleSize;
+  backface-visibility: hidden;
+  position: absolute;
+  overflow: hidden;
+  animation-name: move;
+  animation-duration: $animationDuration;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  $colors: (
+    #583C87,
+    #E45A84,
+    #FFACAC
+  );
+  @for $i from 1 through $amount {
+    &:nth-child(#{$i}) {
+      color: nth($colors, random(length($colors)));
+      top: random(100) * 1%;
+      left: random(100) * 1%;
+      animation-duration: (random($animationDuration * 10) / 10) * 1s + 10s;
+      animation-delay: random(($animationDuration + 10s) * 10) / 10 * -1s;
+      transform-origin: (random(50) - 25) * 1vw (random(50) - 25) * 1vh;
+      $blurRadius: (random() + 0.5) * $particleSize * 0.5;
+      $x: if(random() > 0.5, -1, 1);
+      box-shadow: ($particleSize * 2 * $x) 0 $blurRadius currentColor;
+    }
+  }
+}
+
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}

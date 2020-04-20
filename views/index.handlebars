@@ -1,0 +1,120 @@
+<main>
+
+  <div class="row">
+    <div id="birds">
+    </div>
+  </div>
+
+  <div class="area">
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+
+  <div class="row">
+    <div class="col s12 m4">
+      <div class="card light-blue lighten-1">
+        <div class="card-content white-text">
+          <span class="card-title">Music</span>
+          <p>Let me take you on a journey. A journey...into your mind's eye. Let's explore
+            Music and what it means to feel something in your SOUL. Or some existential shit like that, idk.
+          </p>
+        </div>
+        <div class="card-action">
+          <a class="white-text" class="music" href="/music">Listen to Music Here</a>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m4">
+      <div class="card light-blue lighten-1">
+        <div class="card-content white-text">
+          <span class="card-title">Meditation</span>
+          <p>I am a leaf on the wind. The waves crashing on the rocks. A gentle breeze across a meadow.
+            Stuck in my room, avoiding my family during quarantine. I am...at peace.
+          </p>
+        </div>
+        <div class="card-action">
+          <a class="white-text" class="meditation" href="/meditation">Meditate Here</a>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m4">
+      <div class="card light-blue lighten-1">
+        <div class="card-content white-text">
+          <span class="card-title">Art</span>
+          <p>Click on me and you'll see...a world of pure imagination...
+            Take a look and you'll see into your imagination.
+          </p>
+        </div>
+        <div class="card-action">
+          <a class="white-text" class="art" href="/art">Look at Art Here</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="favs">
+    <div class="col s12">
+      <h2 class="white-text center">Favorites</h2>
+    </div>
+    {{#each favorite}}
+
+    <div class="col s12 m4">
+      <div class="card small">
+        <div class="card-image">
+          <img src="{{image}}">
+        </div>
+        <div class="card-content black-text">
+          <p>{{text}}</p>
+        </div>
+        <div class="card-action black-text">
+          <a href="#" class="unfavorite" data-img="{{image}}" data-url="{{src}}" data-text="{{text}}"
+            data-id="{{id}}"><i class="material-icons">favorite</i></a>
+          <a href="{{url}}" target="_blank"><i class="material-icons">launch</i></a>
+        </div>
+      </div>
+    </div>
+
+    {{/each}}
+
+  </div>
+
+  <footer class="page-footer" style="text-align: center">
+    <a class="logout" href='/logout' style="color:#FFFFFF; padding: 2px;">Logout</a>
+  </footer>
+
+  <!-- RENDER FAVORITES -->
+  <!-- ///////////////////////////////////////////////////////////////////////// -->
+  {{!-- <div class="row">
+
+    {{#each favorite}}
+
+      <div class="col s12 m4">
+          <div class="card small">
+              <div class="card-image">
+                  <img src="{{image}}">
+              </div>
+              <div class="card-content black-text">
+                  <p>{{text}}</p>
+              </div>
+              <div class="card-action black-text">
+                  <a href="#" class="unfavorite" data-img="{{image}}" data-url="{{src}}"
+                      data-text="{{text}}" data-id="{{id}}"><i class="material-icons">favorite</i></a>
+                  <a href="{{src}}" target="_blank"><i class="material-icons">launch</i></a>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    {{/each}} --}}
+  <!-- ///////////////////////////////////////////////////////////////////////// -->
+
+</main>
