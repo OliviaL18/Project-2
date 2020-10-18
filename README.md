@@ -3,6 +3,8 @@ In these trying and frustrating times, everyone needs a break now and then. Give
 
 ## Getting Started
 Visit this link to try it out - [https://nameless-earth-27554.herokuapp.com/](https://nameless-earth-27554.herokuapp.com/)
+Username: givemeabreakapplication@gmail.com
+Password: Givebreak!
 
 ## Built With
 * [AuthO](https://auth0.com/) - To authenticate the user at login
